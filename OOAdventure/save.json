@@ -1,0 +1,73 @@
+{
+  "version": 1,
+  "player": {
+    "room": "Vault",
+    "inventory": [
+      "Teleportation Stone",
+      "Crystal Orb",
+      "Enchanted Rope",
+      "Fire Scroll",
+      "Ice Wand",
+      "Vault Key"
+    ]
+  },
+  "items": {
+    "Crystal Orb": {
+      "location": "inventory"
+    },
+    "Enchanted Rope": {
+      "location": "inventory"
+    },
+    "Fire Scroll": {
+      "location": "inventory"
+    },
+    "Ice Wand": {
+      "location": "inventory"
+    },
+    "Teleportation Stone": {
+      "location": "inventory"
+    },
+    "Vault Key": {
+      "location": "inventory"
+    }
+  },
+  "rooms": {
+    "Entrance": {
+      "exits": {
+        "north": "Library"
+      },
+      "state": {}
+    },
+    "Library": {
+      "exits": {
+        "south": "Entrance",
+        "east": "Altar"
+      },
+      "state": {}
+    },
+    "Altar": {
+      "exits": {
+        "west": "Library",
+        "north": "Chamber"
+      },
+      "state": {}
+    },
+    "Chamber": {
+      "exits": {
+        "south": "Altar",
+        "east": "Vault"
+      },
+      "state": {
+        "ice_state": "refrozen"
+      }
+    },
+    "Vault": {
+      "exits": {
+        "west": "Chamber"
+      },
+      "state": {
+        "open": true
+      }
+    }
+  }
+}
